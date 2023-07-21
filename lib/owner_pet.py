@@ -27,19 +27,18 @@ class Owner:
     def get_sorted_pets(self):
         namelist = []
         objlist=[]
-        namelist= [pet.name for pet in Pet.all if pet.owner == self]
+        namelist=[pet.name for pet in Pet.all if pet.owner == self]
         namelist.sort()
         for name in namelist :
             for pet in Pet.all:
                 if pet.name == name:
                    objlist.append(pet)
-        print(objlist)
         return objlist
     
-owner = Owner("John")
-pet1 = Pet("Fido", "dog", owner)
-pet2 = Pet("Clifford", "dog", owner)
-pet3 = Pet("Whiskers", "cat", owner)
-pet4 = Pet("Jerry", "reptile", owner)
+# owner = Owner("John")
+# pet1 = Pet("Fido", "dog", owner)
+# pet2 = Pet("Clifford", "dog", owner)
+# pet3 = Pet("Whiskers", "cat", owner)
+# pet4 = Pet("Jerry", "reptile", owner)
 
-owner.get_sorted_pets()
+# owner.get_sorted_pets()
